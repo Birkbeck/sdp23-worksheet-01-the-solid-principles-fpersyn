@@ -5,3 +5,5 @@
 In this example, any time we want to add a new style of greeting, we have to change the Greeter class to accept a new type of personality. We don't want to have to modify our existing, working code to add something new. 
 
 How would you correct this situation?
+* Board contains 2 responsibilities: (1) data & domain logic; (2) visualisation;
+* 
