@@ -1,22 +1,13 @@
-public class WeatherTracker {
+public class WeatherTracker implements Tracker {
     String currentConditions;
-    Phone phone;
-    Emailer emailer;
+    TrackerClient client;
 
-    public WeatherTracker() {
-        phone = new Phone();
-        emailer = new Emailer();
+    public WeatherTracker(TrackerClient client) {
+        this.client = client;
     }
 
     public void setCurrentConditions(String weatherDescription) {
         this.currentConditions = weatherDescription;
-        if (weatherDescription == "rainy") {
-            String alert = phone.generateWeatherAlert(weatherDescription);
-            System.out.print(alert);
-        }
-        if (weatherDescription == "sunny") {
-            String alert = emailer.generateWeatherAlert(weatherDescription);
-            System.out.print(alert);
-        }
+        this.client.weatherAlert(weatherDescription);
     }
 }

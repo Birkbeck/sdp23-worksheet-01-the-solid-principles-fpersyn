@@ -10,7 +10,8 @@ public class WeatherTrackerTest {
 
     @Test
     public void testReturnsCurrentWeather() {
-        WeatherTracker tracker = new WeatherTracker();
+        Phone phone = new Phone();
+        WeatherTracker tracker = new WeatherTracker(phone);
         tracker.setCurrentConditions("rainy");
 
         assertEquals("rainy", tracker.currentConditions);
@@ -18,7 +19,8 @@ public class WeatherTrackerTest {
 
     @Test
     public void testAlertsPhoneUsersWhenRaining() {
-        WeatherTracker tracker = new WeatherTracker();
+        Phone phone = new Phone();
+        WeatherTracker tracker = new WeatherTracker(phone);
         System.setOut(new PrintStream(outContent));
         tracker.setCurrentConditions("rainy");
 
@@ -27,7 +29,8 @@ public class WeatherTrackerTest {
 
     @Test
     public void testAlertsViaEmailWhenSunny() {
-        WeatherTracker tracker = new WeatherTracker();
+        Emailer emailer = new Emailer();
+        WeatherTracker tracker = new WeatherTracker(emailer);
         System.setOut(new PrintStream(outContent));
         tracker.setCurrentConditions("sunny");
 
