@@ -9,6 +9,9 @@ The DIP is concerned with reusability. The high-level modules or interfaces of a
 In the example here, the `WeatherTracker` depends on the low-level details of the different notification systems (a phone, an emailer, etc.). These should instead be depending on some abstraction. 
 
 How would you correct this situation?
+1. We create a TrackerClient interface, implemented by Email and Phone
+2. We create a Tracker interface, implemented by WeatherTracker
+3. The implementation (WeatherTracker) is now fully unaware of underlying business logic (details)
 
 ------
 

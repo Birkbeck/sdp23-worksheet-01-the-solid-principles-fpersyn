@@ -1,8 +1,8 @@
 public class UnitUpgrader {
-    public void upgrade(Apartment apartment) {
+    public void upgradeSquareFootage(Apartment apartment) {
         apartment.squareFootage += 40;
-
-        if (apartment.getClass() != Studio.class)
-            apartment.numberOfBedrooms += 1;
+    }
+    public void upgradeBedrooms(ApartmentWithBedrooms apartment) {
+        apartment.numberOfBedrooms += 1;
     }
 }
