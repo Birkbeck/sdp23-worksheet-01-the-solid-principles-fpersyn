@@ -12,12 +12,6 @@ public class PenguinTest {
     }
 
     @Test
-    public void testItCantActuallyFly() {
-        Penguin penguin = new Penguin(5);
-        assertThrows(UnsupportedOperationException.class, penguin::fly);
-    }
-
-    @Test
     public void testItCanSwim() {
         Penguin penguin = new Penguin(5);
         penguin.swim();
