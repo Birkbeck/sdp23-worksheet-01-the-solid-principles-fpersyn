@@ -27,7 +27,7 @@ public class UnitUpgraderTest {
         Studio studio = new Studio();
         studio.setSquareFootage(550);
         UnitUpgrader upgrader = new UnitUpgrader();
-        upgrader.upgrade(studio);
+        upgrader.upgrade(studio.numberOfBedrooms);
 
         assertEquals(590, studio.squareFootage);
     }
