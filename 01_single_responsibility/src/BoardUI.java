@@ -31,7 +31,7 @@ public class BoardUI {
         thirdRow.add(this.board.spots.get(8));
         return thirdRow;
     }
-    
+
     public void display() {
         String formattedFirstRow = this.board.spots.get(0) + " | " + this.board.spots.get(1) + " | " + this.board.spots.get(2) + "\n"
                 + this.board.spots.get(3) + " | " + this.board.spots.get(4) + " | " + this.board.spots.get(5) + "\n"
